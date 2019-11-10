@@ -55,7 +55,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
 
   [_ADJUST] = LAYOUT(\
-             RESET,   RGBRST,  KC_NO,   KC_NO,   KC_NO,                                                        KC_NO,              KC_NO,   KC_NO,   KC_NO,    KC_NO,\
+             RESET,   RGB_RST,  KC_NO,   KC_NO,  KC_NO,                                                        KC_NO,              KC_NO,   KC_NO,   KC_NO,    KC_NO,\
     RESET,   RGB_TOG, RGB_HUI, RGB_SAI, RGB_VAI, KC_NO,                                                        KC_NO,              KC_NO,   KC_NO,   KC_NO,    KC_NO,    KC_NO,\
     KC_NO,   RGB_MOD, RGB_HUD, RGB_SAD, RGB_VAD, KC_NO,                                                        KC_NO,              KC_NO,   KC_NO,   KC_NO,    KC_NO,    KC_NO,\
     KC_NO,   KC_NO,   KC_NO,   KC_TRNS, KC_TRNS, KC_TRNS,            KC_TRNS,                KC_TRNS,          KC_TRNS,            KC_TRNS, KC_NO,   KC_NO,    KC_NO,    KC_NO\
@@ -111,7 +111,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
       #endif
       return false;
       break;
-    case RGBRST:
+    case RGB_RST:
       #ifdef RGBLIGHT_ENABLE
         if (record->event.pressed) {
          //eeconfig_update_rgblight_default();
